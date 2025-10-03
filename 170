@@ -1,0 +1,10 @@
+n = int(input("Введіть трицифрове число: "))
+hundreds = n // 100        # сотні
+tens = (n // 10) % 10      # десятки
+units = n % 10             # одиниці
+if hundreds == tens == units:
+    print(3)               # всі цифри однакові
+elif hundreds == tens or hundreds == units or tens == units:
+    print(2)               # дві цифри однакові
+else:
+    print(0)               # всі цифри різні
