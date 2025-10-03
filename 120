@@ -1,0 +1,10 @@
+s = int(input("Введіть відстань (км): "))   
+t = int(input("Введіть час (хв): "))       
+
+# переводимо хвилини в години
+v = s / (t / 60)  # швидкість = відстань / час (години)
+
+if v <= 60:
+    print("Traffic rules are executed.")   
+else:
+    print("Traffic rules are not met.")    
