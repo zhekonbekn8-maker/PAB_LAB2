@@ -1,0 +1,17 @@
+a = float(input("Enter side a: "))
+b = float(input("Enter side b: "))
+c = float(input("Enter side c: "))
+# Перевірка існування трикутника
+if a + b <= c or a + c <= b or b + c <= a:
+    print("impossible")
+else:
+    # знаходимо найбільшу сторону
+    sides = sorted([a, b, c])
+    x, y, z = sides  # x <= y <= z
+    
+    if abs(z**2 - (x**2 + y**2)) < 1e-9:   # врахування похибки
+        print("rectangular")
+    elif z**2 < x**2 + y**2:
+        print("acute")
+    else:
+        print("obtuse")
