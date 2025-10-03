@@ -1,0 +1,21 @@
+import math
+a = float(input("Введіть a: "))
+b = float(input("Введіть b: "))
+c = float(input("Введіть c: "))
+if a == 0:
+    if b == 0:
+        print("No roots.")  # ні x^2, ні x
+    else:
+        x = -c / b
+        print(f"One root: {x:.2f}")  # лінійне рівняння
+else:
+    D = b**2 - 4*a*c  # дискримінант
+    if D < 0:
+        print("No roots.")  # коренів немає
+    elif D == 0:
+        x = -b / (2*a)
+        print(f"{x:.2f}")  # один корінь
+    else:
+        x1 = (-b + math.sqrt(D)) / (2*a)
+        x2 = (-b - math.sqrt(D)) / (2*a)
+        print(f"{x1:.2f} and {x2:.2f}")  # два корені
