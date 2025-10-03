@@ -1,0 +1,14 @@
+# Введення чотирицифрового числа
+n = int(input("Введіть чотирицифрове число: "))
+
+# Виділяємо цифри
+thousands = n // 1000             # тисячі
+hundreds = (n // 100) % 10        # сотні
+tens = (n // 10) % 10             # десятки
+units = n % 10                    # одиниці
+
+# Перевірка умови
+if (thousands + hundreds) == (tens + units):
+    print(True)
+else:
+    print(False)
